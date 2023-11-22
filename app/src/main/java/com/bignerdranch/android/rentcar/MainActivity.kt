@@ -25,10 +25,10 @@ class MainActivity : AppCompatActivity() {
         okButton.setOnClickListener{
             val hours = numberHours.text.toString().toIntOrNull()
         val car = when {
-            auto.isChecked -> 0.03
-            van.isChecked -> 0.05
-            bus.isChecked -> 0.09
-            else -> 0.0
+            auto.isChecked -> 2000
+            van.isChecked -> 2500
+            bus.isChecked -> 3000
+            else -> 0
         }
             if(hours != null) {
                 val result = hours * car
